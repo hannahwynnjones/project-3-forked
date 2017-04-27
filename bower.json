@@ -1,0 +1,46 @@
+{
+  "name": "project-3",
+  "description": "WDI25 Project 3",
+  "main": "server.js",
+  "authors": [
+    "alexpchin <alex@alexchin.co.uk>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ev-emitter": "*",
+    "desandro-matches-selector": "*",
+    "fizzy-ui-utils": "*",
+    "get-size": "*",
+    "outlayer": "*",
+    "masonry": "*",
+    "angular": "^1.6.3",
+    "angular-ui-router": "^0.4.2",
+    "angular-resource": "^1.6.3",
+    "angular-bootstrap": "^2.5.0",
+    "angular-animate": "^1.6.3",
+    "angular-messages": "^1.6.3",
+    "bootstrap-css-only": "^3.3.7",
+    "satellizer": "^0.15.5",
+    "angular-masonry": "^0.17.0"
+  },
+  "overrides": {
+    "outlayer": {
+      "main": [
+        "item.js",
+        "outlayer.js"
+      ]
+    }
+  },
+  "resolutions": {
+    "angular": "^1.6.3",
+    "outlayer": "2.1.0"
+  }
+}

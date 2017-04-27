@@ -1,0 +1,65 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-lg-4 col-md-4 pic-and-buttons" >
+      <img ng-src="{{ profile.user.imageSRC }}" alt="{{profile.user.username}}">
+
+      <button class ="btn" ng-if="main.profilePageId === profile.user.id" ui-sref="editProfile({id: main.profilePageId})">Edit profile</button>
+
+      <button class ="btn del" ng-if="main.profilePageId === profile.user.id" ng-click="profile.delete()">Delete Profile</button>
+    </div>
+
+<!--- its user.image for the time bng whilst im styling  bukixxxx-->
+
+      <div class="col-lg-3 col-md-4 col-sm-12 info">
+
+        <p>Username: {{ profile.user.username }}</p>
+        <p>Email: {{ profile.user.email }}</p>
+        <p>Location: {{ profile.user.location }}</p>
+
+      </div>
+
+
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <a href="#" ng-click="showUlsend = !showUlsend"><h3 ng-if="main.profilePageId === profile.user.id"> Requests sent</h3></a>
+        <ul class="toggle-ul" ng-if="main.profilePageId === profile.user.id" ng-hide="!showUlsend">
+          <li class="tog" ng-repeat="myReq in profile.myRequests"><p>
+            Requested: {{ myReq.item[0].name}}</p></li>
+        </ul>
+
+
+
+        <a href="#" ng-click="showUlreqs = !showUlreqs"><h3 ng-if="main.profilePageId === profile.user.id">Pending requests</h3></a>
+        <ul class="toggle-ul" ng-hide="!showUlreqs">
+          {{profile.request}}
+            <li class="tog" ng-repeat="request in profile.incomingRequests">Requested Item: {{ request.item[0].name }}<br>num of   days{{request.numberOfDays}}<br>
+              requested By: {{request.requester[0].username}}<button ng-click="profile.accept(request)">Accept</button><button ng-click="profile.decline(request)">Decline</button>
+            <input type="hidden" ng-model="profile.request">
+          </li>
+        </ul>
+
+
+      <a href="#" ng-click="showUlactive = !showUlactive"><h3 >Active Requests</h3></a>
+      <ul class="toggle-ul" ng-hide="!showUlactive">
+        <li class="tog" ng-repeat="request in profile.activeRequests">
+          requested Item:{{ request.item[0].name }}<br>
+          num of days{{request.numberOfDays}}<br>
+          requested By: {{request.requester[0].username}}
+          {{request.requester.name}}{{request.requester.username}}
+        </li>
+        </ul>
+
+      <a href="#" ng-click="showUlaccept = !showUlaccept"><h3>Accepted</h3></a>
+        <ul class="toggle-ul" ng-hide="!showUlaccept">
+          <li class="tog" ng-repeat="request in profile.accepted">
+          requested Item:{{ request.item[0].name }}<br>
+          num of days{{request.numberOfDays}}<br>
+          requested By: {{request.requester[0].username}}
+          {{request.requester.username}}
+          <button ui-sref="payment({id: request.id})">Pay</button>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
