@@ -10,16 +10,18 @@ By Sam, Buki, Jake and Hannah
 
 Project link - https://guarded-refuge-81006.herokuapp.com/
 
+This repository has been forked from the original which can be found at https://github.com/hannahwynnjones/BackrowBoiz-wdi25-Project-3
+
 **[Gallery](#gallery)**  
 
 
-#### Approach / How It Works
+### Approach / How It Works
 
 The idea behind the app was to create a place where users could post items of clothing for other users to rent. A user can them come along and 'request' the item and let the item owner know the number of days they want the item for and can also comment on the item as well. At this point, both the user and the item owner receive different emails confirming the request. The item owner then needs to go to the Fabric website to 'accept' the request. The user then is able to pay for the item using Stripe and another set of emails is sent to both parties once the payment has been made.
 
 Users can login using either an email address, Facebook, Instagram or Github. Users are able to upload images and descriptions of their item that they want to rent and then edit and delete these posts . They're also able to update or delete their profile.
 
-#### The Build
+### The Build
 
 As a team, we started wire framing on the white board and moved those ideas to Balsamiq.  We used Trello to plan the one week sprint.
 
@@ -46,13 +48,13 @@ For my part I was responsible for the Authentication on the app, both the basic 
 I also added Nodemailer to the app so that users received emails when they register and when they are the requestor or have their item's requested.
 
 <p align="center" style="padding: 20px 0;">
-  <img src="src/images/email1.png" width="400px;" style="padding-bottom: 10px;">
+  <img src="src/images/email1.png" width="600px;" style="padding-bottom: 10px;">
 </p>
 
 The other main part I was responsible for was the styling of the item show page which I aimed to be smart and sophisticated, and also responsive.
 
 <p align="center" style="padding: 20px 0;">
-  <img src="src/images/ss-show.png" width="800px;" style="padding-bottom: 10px;">
+  <img src="src/images/ss-show.png" width="900px;" style="padding-bottom: 10px;">
 </p>
 
 ### Testing
@@ -61,17 +63,11 @@ Tests were carried out using Mocha and Supertest which tested both the back ad f
 
 ### Problems & Challenges
 
-As a team we worked really well as we all played to our strengths and because we pair coded a good proportion, we all understood the dynamics of the app.
-
 Our main issues that arose were from git conflicts especially when styling the app.  We were all in agreement that should we work together, we'd use a structured set of SCSS files rather than one.
 
 Stripe, Map radius and Instagram Oauth proved difficult but they were worth it when they came together.
 
 Websockets would have also been a great addition to the project but was removed as it was taking too much time.
-
-we shall see in the presentation
-questionable items uploaded by the public
-sometimes the comment for the item pops up in the top corner when you make the request.
 
 ### What went well
 
@@ -88,19 +84,19 @@ As a team we worked really well as we all played to our strengths and because we
 
 # Gallery
 
-<h5>Welcome page with search bar open</h5>
+<h4>Welcome page with search bar open</h4>
 <br>
 <p align="center">
   <img src="src/images/ss-home2.png" width="600px;" style="padding-bottom: 10px;">
 </p>
 
-<h5>Login page</h5>
+<h4>Login page</h4>
 <br>
 <p align="center" style="padding: 20px 0;">
   <img src="src/images/ss-login.png" width="600px;" style="padding-bottom: 10px;">
 </p>
 
-<h5>User profile page </h5>
+<h4>User profile page </h4>
 
 This is where users can click on the tabs on the right and see whether they have requests sent, pending, active requests or accepted requests (where they can go through to the stripe payment page)
 
@@ -108,18 +104,18 @@ This is where users can click on the tabs on the right and see whether they have
   <img src="src/images/ss-profile.png" width="600px;" style="padding-bottom: 10px;">
 </p>
 
-<h5>Stripe payment page</h5>
+<h4>Stripe payment page</h4>
 <br>
 <p align="center" style="padding: 20px 0;">
   <img src="src/images/ss-stripe.png" width="600px;" style="padding-bottom: 10px;">
 </p>
 
-<h5>Item location</h5>
+<h4>Item location</h4>
  Sliding bar used to show the distance the item is from.  In this picture the red circle show the area that is 7 miles from the item's location.
  <p align="center" style="padding: 20px 0;">
   <img src="src/images/ss-map.png" width="600px;" style="padding-bottom: 10px;">
 </p>
-<h5>Comments</h5>
+<h4>Comments</h4>
 Users can add comments and give the item a rating.
 <p align="center" style="padding: 20px 0;">
   <img src="src/images/ss-comment.png" width="600px;" style="padding-bottom: 10px;">
