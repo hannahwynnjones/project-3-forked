@@ -99,6 +99,7 @@ As a team we worked really well as we all played to our strengths and because we
 <h4>User profile page </h4>
 
 This is where users can click on the tabs on the right and see whether they have requests sent, pending, active requests or accepted requests (where they can go through to the stripe payment page)
+<br>
 
 <p align="center" style="padding: 20px 0;">
   <img src="src/images/ss-profile.png" width="600px;" style="padding-bottom: 10px;">
@@ -112,11 +113,14 @@ This is where users can click on the tabs on the right and see whether they have
 
 <h4>Item location</h4>
  Sliding bar used to show the distance the item is from.  In this picture the red circle show the area that is 7 miles from the item's location.
+ <br>
+
  <p align="center" style="padding: 20px 0;">
   <img src="src/images/ss-map.png" width="600px;" style="padding-bottom: 10px;">
 </p>
 <h4>Comments</h4>
 Users can add comments and give the item a rating.
+<br>
 <p align="center" style="padding: 20px 0;">
   <img src="src/images/ss-comment.png" width="600px;" style="padding-bottom: 10px;">
 </p>
